@@ -5,9 +5,9 @@
 “php index.php migrate/now”
 4.	Visit the URL for your current site installation
 
-Adding to an existing Codeigniter installation:
+## Adding to an existing Codeigniter installation:
 
-1.	Copy the following files over to your current CI install:
+### 1.	Copy the following files over to your current CI install:
 
 - themes/*
 - application/config/ion_auth.php
@@ -28,7 +28,7 @@ Adding to an existing Codeigniter installation:
 - application/models/Ion_auth_model.php
 - application/views/auth/*
 
-2.	Files to update:
+### 2.	Files to update:
 
 - application/config/autoload.php
     1. Make sure the following libraries are loaded: 'session', 'ion_auth', 'layout', 'database' i.e. $autoload['libraries'] = array('session', 'ion_auth', 'layout', 'database');
@@ -41,7 +41,7 @@ Adding to an existing Codeigniter installation:
     4. (only need to do if migration version is greater than 1), if migration version is greater than one, rename file application/migrations/001_install_ion_auth.php to the next migration number i.e. 003_install_ion_auth.php
     5. Run the migration, open bash shell, and in the site root type the following to perform a migration:  “php index.php migrate/now”
 
-3.	Sample controller file:  application/controllers/Welcome.php
+### 3.	Sample controller file:  application/controllers/Welcome.php
 
 - Extend by MY_Controller
 - Added a _remap method 
