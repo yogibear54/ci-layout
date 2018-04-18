@@ -6,6 +6,7 @@
 4.	Visit the URL for your current site installation
 
 Adding to an existing Codeigniter installation:
+
 1.	Copy the following files over to your current CI install:
 
 - themes/*
