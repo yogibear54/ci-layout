@@ -28,12 +28,12 @@ The theming library allows theme developers and backend developers to work indep
 
 ### 2.	Files to update:
 
-- application/config/autoload.php
+- **application/config/autoload.php**
     1. Make sure the following libraries are loaded: 'layout' i.e. $autoload['libraries'] = array('layout');
     2. Make sure the following configs are loaded: ‘layout’ i.e. $autoload['config'] = array('layout');
 
 
-### 3.	Sample controller file:  application/controllers/Welcome.php
+### 3.	Sample controller file:  **application/controllers/Welcome.php**
 
 - Extend by Layout_Controller
 - Added a _remap method 
@@ -67,7 +67,7 @@ We have 3 methods for loading packages:
 - Add CSS Package: This just loads the css file i.e. $this->layout->addCSSPackage(‘bootstrap/dist/css/bootstrap.css’);
 
 ### Additional Methods
-See more methods in application/libraries/layout.php
+See more methods in **application/libraries/layout.php**
 
 
 
