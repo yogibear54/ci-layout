@@ -2,9 +2,9 @@
 1.	Copy “application” and “themes” directory to your root.  Allow the filesystem to overwrite the files.
 2.	Visit the URL for your current site installation
 
-## Adding to an existing Codeigniter installation:
+# Adding to an existing Codeigniter installation:
 
-### 1.	Copy the following files over to your current CI install:
+## 1.	Copy the following files over to your current CI install:
 
 - themes/*
 - application/config/layout.php
@@ -16,14 +16,14 @@
 - application/libraries/Layout.php
 
 
-### 2.	Files to update:
+## 2.	Files to update:
 
 - application/config/autoload.php
     1. Make sure the following libraries are loaded: 'layout' i.e. $autoload['libraries'] = array('layout');
     2. Make sure the following configs are loaded: ‘layout’ i.e. $autoload['config'] = array('layout');
 
 
-### 3.	Sample controller file:  application/controllers/Welcome.php
+## 3.	Sample controller file:  application/controllers/Welcome.php
 
 - Extend by Layout_Controller
 - Added a _remap method 
