@@ -1,49 +1,31 @@
 # New Codeigniter Installation (v. 3.1.8):
 1.	Copy “application” and “themes” directory to your root.  Allow the filesystem to overwrite the files.
-2.	Open application/config/database.php and add in your database connection information here.
-3.	Open bash, and in the site root type the following to perform a migration:
-“php index.php migrate/now”
-4.	Visit the URL for your current site installation
+2.	Visit the URL for your current site installation
 
 ## Adding to an existing Codeigniter installation:
 
 ### 1.	Copy the following files over to your current CI install:
 
 - themes/*
-- application/config/ion_auth.php
 - application/config/layout.php
-- application/controllers/Auth.php
-- application/controllers/Migrate.php
-- application/core/Base_Controller.php
+- application/core/Layout_Controller.php
 - application/core/MY_Controller.php
 - application/helpers/MY_path_helper.php
-- application/language/english/auth_lang.php
 - application/language/english/error_lang.php
-- application/language/english/ion_auth_lang.php
 - application/language/english/site_lang.php
-- application/libraries/Bcrypt.php
-- application/libraries/Ion_auth.php
 - application/libraries/Layout.php
-- application/migrations/001_install_ion_auth.php
-- application/models/Ion_auth_model.php
-- application/views/auth/*
+
 
 ### 2.	Files to update:
 
 - application/config/autoload.php
-    1. Make sure the following libraries are loaded: 'session', 'ion_auth', 'layout', 'database' i.e. $autoload['libraries'] = array('session', 'ion_auth', 'layout', 'database');
+    1. Make sure the following libraries are loaded: 'layout' i.e. $autoload['libraries'] = array('layout');
     2. Make sure the following configs are loaded: ‘layout’ i.e. $autoload['config'] = array('layout');
-    3. Make sure the following language files are loaded: ‘ion_auth’ i.e. $autoload['language'] = array('ion_auth');
-- application/config/migration.php
-    1. Make sure migration is enabled i.e. $config['migration_enabled'] = TRUE;
-    2. Make sure migration type is sequential i.e. $config['migration_type'] = 'sequential';
-    3. Depending on your current application, increment the migration version by 1.  i.e. $config['migration_version'] = 3;
-    4. (only need to do if migration version is greater than 1), if migration version is greater than one, rename file application/migrations/001_install_ion_auth.php to the next migration number i.e. 003_install_ion_auth.php
-    5. Run the migration, open bash shell, and in the site root type the following to perform a migration:  “php index.php migrate/now”
+
 
 ### 3.	Sample controller file:  application/controllers/Welcome.php
 
-- Extend by MY_Controller
+- Extend by Layout_Controller
 - Added a _remap method 
 - In controller method, can load the layout object
 - In the view, load data array to the template for display
