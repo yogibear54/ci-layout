@@ -7,8 +7,8 @@ require_once(dirname(__FILE__)."/Layout_Controller.php");
 
 class MY_Controller extends Layout_Controller 
 {
-    public function __construct($accessLevel = parent::USER_LEVEL_BOSS, $logged_in = TRUE)
+    public function __construct()
     {
-        parent::__construct($accessLevel, $logged_in);
+        parent::__construct();
     }
 }
